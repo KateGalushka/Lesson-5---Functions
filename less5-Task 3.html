@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    <pre>
+        Создайте одну глобальную переменную с произвольным значением и две функции. Продемонстрируйте, что глобальная переменная может использоваться в этих двух функциях.
+    </pre>
+
+    <script>
+        let global = 11;
+        
+        function func1(x) {
+            return x = global*global;
+        }
+        function func2(y) {
+            return y = global+global;
+        }
+        console.log(func1(global));
+        console.log(func2(global));
+        
+   
+    </script>
+</body>
+
+</html>

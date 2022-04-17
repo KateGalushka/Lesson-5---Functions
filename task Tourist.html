@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist</title>
+</head>
+<body>
+    
+    <script>
+        let howManypeople=2;
+        let howManydays=11;
+        let country="Turkey";
+        let priceEgypt=100;
+        let priceTurkey=150;
+        let priceBulgaria=130;
+        let priceOftour;
+
+        calculatePriceOftour(howManypeople,howManydays,country);
+
+        function calculatePriceOftour (a,b=7,c) {
+            if (a==0) {
+                console.log('Error');
+                return;
+            }
+            if (b<5) {
+                console.log('Error');
+                return; 
+            }
+
+            switch(c) {
+                 case "Egypt":
+                    priceOftour=a*b*priceEgypt;
+                    break;
+                case "Turkey":
+                    priceOftour=a*b*priceTurkey;
+                    break;
+                case "Bulgaria":
+                    priceOftour=a*b*priceBulgaria;
+                    break;
+             }
+            if (b>=10) {
+                console.log('Знижка 10%');
+                priceOftour*=0.9;
+            }
+            console.log(`Загальна вартість туру для ${a} осіб на ${b} днів: ${priceOftour}`);
+        }
+    </script>
+</body>
+</html>

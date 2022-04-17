@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11-2</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Создайте функцию avg(a, b, c), которая возращает среднее арифметическое для чисел a, b, c
+        Если параметр отсутствует - не используйте значение для расчета среднего арифметического значения.
+    </pre>
+    <script>
+        function avg (a,b,c) {
+           // if (a==undefined && b==undefined && c==undefined) {
+             //   return 'no numbers';
+            
+            let countOfNumbers = 0;
+            let sumOfNumbers = 0;
+
+            if(a!==undefined && a!==null && a!==NaN) {
+                countOfNumbers++;
+                sumOfNumbers+=a;
+            }
+            if(b!==undefined && b!==null && b!==NaN) {
+                countOfNumbers++;
+                sumOfNumbers+=b;
+            }
+            if(c!==undefined && c!==null && c!==NaN) {
+                countOfNumbers++;
+                sumOfNumbers+=c;
+            }
+            if (countOfNumbers!==0) {
+                return (sumOfNumbers/countOfNumbers);
+                }
+        }
+        let result=avg(4,56,91);
+
+        if (result!==undefined) {
+            console.log(result);
+            }
+            else {
+                console.log('No numbers!');
+            }
+    </script>
+</body>
+</html>

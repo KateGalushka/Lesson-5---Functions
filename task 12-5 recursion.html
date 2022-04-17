@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12-5</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Запросите у пользователя число. Выведите все числа в обратном поряке от введенного пользователем значения до 1. Используйте для решения рекурсию.
+    </pre>
+    <script>
+        let x = +prompt("Введіть число:");
+        function showReverse(i) {
+           if(i<=1) {
+             console.log(1);
+             return;
+           }
+            console.log(i);
+            return showReverse(i-1);
+           }
+        
+        showReverse(x);
+
+        
+    </script>
+</body>
+</html>
